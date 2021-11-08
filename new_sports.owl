@@ -1,0 +1,827 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:absolute:sports-ontology"
+     xml:base="urn:absolute:sports-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sport="http://www.co-ode.org/ontologies/sport/sport.owl#"
+     xmlns:sports-ontology="urn:absolute:sports-ontology#">
+    <owl:Ontology rdf:about="urn:absolute:sports-ontology">
+        <rdfs:comment xml:lang="en">A sports ontology</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">version 1.5</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <rdfs:comment>utilization</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+        <rdfs:comment>play by who</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:sport-ontology#isPlayedIn -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:sport-ontology#isPlayedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+        <rdfs:comment>play in where</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:sports-ontology#play -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:sports-ontology#play">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:sports-ontology#hasCost -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:sports-ontology#hasCost">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Asphalt -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Asphalt">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+        <rdfs:comment>For tires rolling</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ball -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ball">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <rdfs:comment>For shooting in soccer</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Bicycle -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Bicycle">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <rdfs:comment>For cycling</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Cement -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Cement">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+        <rdfs:comment>Hard</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Clay -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Clay">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Equipment -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sports-ontology#hasCost"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Equipment for playing sport</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Grass -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Grass">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+        <rdfs:comment>Soft</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground">
+        <rdfs:comment>Place for playing in</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player">
+        <rdfs:comment>Who participate into sport</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Racquet -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Racquet">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <rdfs:comment>For swinging in badminton</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Sport -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Water -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Water">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+        <rdfs:comment>For swimming</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    
+
+
+    <!-- urn:absolute:sport-ontology#Trunk -->
+
+    <owl:Class rdf:about="urn:absolute:sport-ontology#Trunk">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <rdfs:comment>Pant for swimming</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:sports-ontology#Badminton -->
+
+    <owl:Class rdf:about="urn:absolute:sports-ontology#Badminton">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Racquet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Cement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:sports-ontology#Boxing -->
+
+    <owl:Class rdf:about="urn:absolute:sports-ontology#Boxing">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute:sports-ontology#Glove"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute:sports-ontology#Ring"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:sports-ontology#Cycling -->
+
+    <owl:Class rdf:about="urn:absolute:sports-ontology#Cycling">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Bicycle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Asphalt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:sports-ontology#Glove -->
+
+    <owl:Class rdf:about="urn:absolute:sports-ontology#Glove">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <rdfs:comment>For protecting hands while punching</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:sports-ontology#Ring -->
+
+    <owl:Class rdf:about="urn:absolute:sports-ontology#Ring">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+        <rdfs:comment>For boxer stand on</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:sports-ontology#Soccer -->
+
+    <owl:Class rdf:about="urn:absolute:sports-ontology#Soccer">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ball"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute:sports-ontology#Glove"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Grass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:sports-ontology#Swim -->
+
+    <owl:Class rdf:about="urn:absolute:sports-ontology#Swim">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute:sport-ontology#Trunk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Water"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:sports-ontology#Tennis -->
+
+    <owl:Class rdf:about="urn:absolute:sports-ontology#Tennis">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ball"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Racquet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Cement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:sport-ontology#cycling -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sport-ontology#cycling">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdf:type rdf:resource="urn:absolute:sports-ontology#Cycling"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Bicycle"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Asphalt"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Cement"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sport-ontology#soccer -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sport-ontology#soccer">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdf:type rdf:resource="urn:absolute:sports-ontology#Soccer"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ball"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Grass"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">22</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sport-ontology#swim -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sport-ontology#swim">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdf:type rdf:resource="urn:absolute:sports-ontology#Swim"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute:sport-ontology#Trunk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Water"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sport-ontology#tennis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sport-ontology#tennis">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdf:type rdf:resource="urn:absolute:sports-ontology#Tennis"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Racquet"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Cement"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Clay"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Grass"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sports-ontology#Michael_Phelps -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sports-ontology#Michael_Phelps">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute:sport-ontology#Trunk"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Water"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sports-ontology#play"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute:sports-ontology#Swim"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sports-ontology#Pele -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sports-ontology#Pele">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ball"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Grass"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sports-ontology#play"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute:sports-ontology#Soccer"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sports-ontology#Tien_Minh -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sports-ontology#Tien_Minh">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Racquet"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Cement"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sports-ontology#play"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute:sports-ontology#Badminton"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sports-ontology#badminton -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sports-ontology#badminton">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdf:type rdf:resource="urn:absolute:sports-ontology#Badminton"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Cement"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Racquet"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sports-ontology#ball -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sports-ontology#ball">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ball"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <sports-ontology:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</sports-ontology:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sports-ontology#bicycle -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sports-ontology#bicycle">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Bicycle"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <sports-ontology:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</sports-ontology:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sports-ontology#boxing -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sports-ontology#boxing">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdf:type rdf:resource="urn:absolute:sports-ontology#Boxing"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute:sports-ontology#Glove"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="urn:absolute:sport-ontology#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="urn:absolute:sports-ontology#Ring"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sports-ontology#glove -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sports-ontology#glove">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <rdf:type rdf:resource="urn:absolute:sports-ontology#Glove"/>
+        <sports-ontology:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</sports-ontology:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sports-ontology#racquet -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sports-ontology#racquet">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Racquet"/>
+        <sports-ontology:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6000</sports-ontology:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sports-ontology#trunk -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sports-ontology#trunk">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <rdf:type rdf:resource="urn:absolute:sport-ontology#Trunk"/>
+        <sports-ontology:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</sports-ontology:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Asphalt"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Cement"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Clay"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Grass"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Water"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#Ring"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ball"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Bicycle"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Racquet"/>
+            <rdf:Description rdf:about="urn:absolute:sport-ontology#Trunk"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#Glove"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#Badminton"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#Boxing"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#Cycling"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#Soccer"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#Swim"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#Tennis"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#Michael_Phelps"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#Pele"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#Tien_Minh"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#ball"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#bicycle"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#glove"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#racquet"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#trunk"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipament"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+            <rdf:Description rdf:about="urn:absolute:sport-ontology#isPlayedIn"/>
+            <rdf:Description rdf:about="urn:absolute:sports-ontology#play"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
