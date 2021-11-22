@@ -416,11 +416,7 @@
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
         <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain"/>
         <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle"/>
-
-        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_cycling"/>
-
         <sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_cycling"/>
-
     </owl:NamedIndividual>
     
 
@@ -431,11 +427,7 @@
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
         <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
         <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle"/>
-
-        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_cycling"/>
-
         <sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_cycling"/>
-
     </owl:NamedIndividual>
     
 
@@ -446,11 +438,7 @@
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese"/>
         <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam"/>
         <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk"/>
-
-        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_swim"/>
-
         <sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_swim"/>
-
     </owl:NamedIndividual>
     
 
@@ -461,11 +449,7 @@
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese"/>
         <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam"/>
         <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball"/>
-
-        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_soccer"/>
-
         <sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_soccer"/>
-
     </owl:NamedIndividual>
     
 
@@ -498,7 +482,6 @@
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese"/>
         <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam"/>
         <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
-        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_tennis"/>
         <sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_tennis"/>
     </owl:NamedIndividual>
     
@@ -510,7 +493,6 @@
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
         <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
         <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk"/>
-        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_swim"/>
         <sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_swim"/>
     </owl:NamedIndividual>
     
@@ -533,7 +515,6 @@
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
         <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_brazil"/>
         <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball"/>
-        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_soccer"/>
         <sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_soccer"/>
     </owl:NamedIndividual>
     
@@ -545,7 +526,6 @@
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
         <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
         <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
-        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_tennis"/>
         <sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_tennis"/>
     </owl:NamedIndividual>
     
@@ -602,7 +582,6 @@
     
 
 
-=======
     <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Sport_cycling -->
 
     <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_cycling">
@@ -711,55 +690,7 @@
     
 
 
-    <!-- urn:absolute:sport-ontology#Sport_cycling -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:sport-ontology#Sport_cycling">
-        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_netherlands"/>
-        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle"/>
-        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#cycling_player"/>
-        <sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_asphalt"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:sport-ontology#Sport_soccer -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:sport-ontology#Sport_soccer">
-        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain"/>
-        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball"/>
-        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#soccer_player"/>
-        <sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_grass"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:sport-ontology#Sport_swim -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:sport-ontology#Sport_swim">
-        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
-        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk"/>
-        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#swim_player"/>
-        <sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_water"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- urn:absolute:sport-ontology#Sport_tennis -->
-
-    <owl:NamedIndividual rdf:about="urn:absolute:sport-ontology#Sport_tennis">
-        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain"/>
-        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
-        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#tennis_player"/>
-        <sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_clay"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
