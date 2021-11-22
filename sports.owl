@@ -1,792 +1,742 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF
-	xmlns="http://www.co-ode.org/ontologies/sport/sport.owl##"
-	xmlns:owl="http://www.w3.org/2002/07/owl#"
-	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	xmlns:xml="http://www.w3.org/XML/1998/namespace"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-	xmlns:sport="http://www.co-ode.org/ontologies/sport/sport.owl#">
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-	<rdfs:comment xml:lang="en">A sports ontology</rdfs:comment>
-	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">version 1.5</owl:versionInfo>
-</rdf:Description>
-<!--  -->
-<!--  -->
-<!-- ################################################################# -->
-<!-- # -->
-<!-- #    Object Properties -->
-<!-- # -->
-<!-- ################################################################# -->
-<!--  -->
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#hasCountry -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#hasCountry">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-	<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipment -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipment">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-	<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
-	<rdfs:comment>utilization</rdfs:comment>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#hasPlayer -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#hasPlayer">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-	<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-	<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-	<rdfs:comment>play by who</rdfs:comment>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedIn -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedIn">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-	<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
-	<rdfs:comment>play in where</rdfs:comment>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#play -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#play">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-	<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-	<rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-<!--  -->
-<!--  -->
-<!--  -->
-<!-- ################################################################# -->
-<!-- # -->
-<!-- #    Data properties -->
-<!-- # -->
-<!-- ################################################################# -->
-<!--  -->
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#hasCost -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#hasCost">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-	<rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
-	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-</rdf:Description>
-<!--  -->
-<!--  -->
-<!--  -->
-<!-- ################################################################# -->
-<!-- # -->
-<!-- #    Classes -->
-<!-- # -->
-<!-- ################################################################# -->
-<!--  -->
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Equipment -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:nodeID="genid1"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid1">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
-	<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment">
-	<rdfs:subClassOf rdf:nodeID="genid2"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid2">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedIn"/>
-	<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment">
-	<rdfs:subClassOf rdf:nodeID="genid3"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid3">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasCost"/>
-	<owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment">
-	<rdfs:comment>Equipment for playing sport</rdfs:comment>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:nodeID="genid4"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid4">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
-	<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground">
-	<rdfs:comment>Place for playing in</rdfs:comment>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:nodeID="genid5"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid5">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasCountry"/>
-	<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player">
-	<rdfs:subClassOf rdf:nodeID="genid6"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid6">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipment"/>
-	<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player">
-	<rdfs:subClassOf rdf:nodeID="genid7"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid7">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedIn"/>
-	<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player">
-	<rdfs:subClassOf rdf:nodeID="genid8"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid8">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#play"/>
-	<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player">
-	<rdfs:comment>Who participate into sport</rdfs:comment>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Sport -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:nodeID="genid9"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid9">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasCountry"/>
-	<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport">
-	<rdfs:subClassOf rdf:nodeID="genid10"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid10">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipment"/>
-	<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport">
-	<rdfs:subClassOf rdf:nodeID="genid11"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid11">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
-	<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport">
-	<rdfs:subClassOf rdf:nodeID="genid12"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid12">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedIn"/>
-	<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.w3.org/2002/07/owl#Thing -->
-
-<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-</rdf:Description>
-<!--  -->
-<!--  -->
-<!--  -->
-<!-- ################################################################# -->
-<!-- # -->
-<!-- #    Individuals -->
-<!-- # -->
-<!-- ################################################################# -->
-<!--  -->
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country_brazil -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country_brazil">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country_india -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country_india">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country_netherlands -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country_netherlands">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country_other -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
-	<sport:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</sport:hasCost>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
-	<sport:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</sport:hasCost>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_glove -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_glove">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
-	<sport:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</sport:hasCost>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
-	<sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#badminton_player"/>
-	<sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#tennis_player"/>
-	<sport:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6000</sport:hasCost>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
-	<sport:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</sport:hasCost>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground_asphalt -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_asphalt">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground_cement -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_cement">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
-	<sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#badminton_player"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground_clay -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_clay">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground_grass -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_grass">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground_ring -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_ring">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground_water -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_water">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Adam_Yates -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Adam_Yates">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
-	<sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle"/>
-	<sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_asphalt"/>
-	<sport:play rdf:resource="urn:absolute:sport-ontology#Sport_cycling"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Alfredo_Binda -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Alfredo_Binda">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
-	<sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle"/>
-	<sport:play rdf:resource="urn:absolute:sport-ontology#Sport_cycling"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Anh_Vien -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Anh_Vien">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese"/>
-	<sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk"/>
-	<sport:play rdf:resource="urn:absolute:sport-ontology#Sport_swim"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Cong_Phuong -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Cong_Phuong">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese"/>
-	<sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball"/>
-	<sport:play rdf:resource="urn:absolute:sport-ontology#Sport_soccer"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Duy_Nhat -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Duy_Nhat">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese"/>
-	<sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_glove"/>
-	<sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_boxing"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Lee_Chong_Wei -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Lee_Chong_Wei">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
-	<sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
-	<sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_badminton"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Michael_Phelps -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Michael_Phelps">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
-	<sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk"/>
-	<sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_water"/>
-	<sport:play rdf:resource="urn:absolute:sport-ontology#Sport_swim"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Mohammed_Ali -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Mohammed_Ali">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
-	<sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_glove"/>
-	<sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_boxing"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Pele -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Pele">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
-	<sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_brazil"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball"/>
-	<sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_grass"/>
-	<sport:play rdf:resource="urn:absolute:sport-ontology#Sport_soccer"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Roger_Federer -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Roger_Federer">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
-	<sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
-	<sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_cement"/>
-	<sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_clay"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Tien_Minh -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Tien_Minh">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese"/>
-	<sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
-	<sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_badminton"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Sport_badminton -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_badminton">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-	<rdf:type rdf:nodeID="genid13"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid13">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<owl:unionOf rdf:nodeID="genid16"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid16">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:nodeID="genid17"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid17">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
-	<owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
-	<owl:onClass rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid16">
-	<rdf:rest rdf:nodeID="genid14"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid14">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:nodeID="genid15"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid15">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
-	<owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:qualifiedCardinality>
-	<owl:onClass rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid14">
-	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_badminton">
-	<sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
-	<sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#badminton_player"/>
-	<sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_cement"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#Sport_boxing -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_boxing">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_glove"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#badminton_player -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#badminton_player">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-	<sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Lee_Chong_Wei"/>
-	<sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Tien_Minh"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#boxing_player -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#boxing_player">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#cycling_player -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#cycling_player">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#soccer_player -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#soccer_player">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#swim_player -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#swim_player">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-<!--  -->
-<!-- http://www.co-ode.org/ontologies/sport/sport.owl#tennis_player -->
-
-<rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#tennis_player">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-</rdf:Description>
-<!--  -->
-<!-- urn:absolute:sport-ontology#Sport_cycling -->
-
-<rdf:Description rdf:about="urn:absolute:sport-ontology#Sport_cycling">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-</rdf:Description>
-<!--  -->
-<!-- urn:absolute:sport-ontology#Sport_soccer -->
-
-<rdf:Description rdf:about="urn:absolute:sport-ontology#Sport_soccer">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-</rdf:Description>
-<!--  -->
-<!-- urn:absolute:sport-ontology#Sport_swim -->
-
-<rdf:Description rdf:about="urn:absolute:sport-ontology#Sport_swim">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-</rdf:Description>
-<!--  -->
-<!-- urn:absolute:sport-ontology#Sport_tennis -->
-
-<rdf:Description rdf:about="urn:absolute:sport-ontology#Sport_tennis">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-	<rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-	<sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain"/>
-	<sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
-	<sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#tennis_player"/>
-	<sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_clay"/>
-</rdf:Description>
-<!--  -->
-<!--  -->
-<!--  -->
-<!-- ################################################################# -->
-<!-- # -->
-<!-- #    General axioms -->
-<!-- # -->
-<!-- ################################################################# -->
-<!--  -->
-<!--  -->
-
-<rdf:Description rdf:nodeID="genid18">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-	<owl:members rdf:nodeID="genid22"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid22">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
-	<rdf:rest rdf:nodeID="genid21"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid21">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
-	<rdf:rest rdf:nodeID="genid20"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid20">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
-	<rdf:rest rdf:nodeID="genid19"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid19">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
-	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-</rdf:Description>
-<!--  -->
-
-<rdf:Description rdf:nodeID="genid23">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-	<owl:distinctMembers rdf:nodeID="genid28"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid28">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball"/>
-	<rdf:rest rdf:nodeID="genid27"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid27">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle"/>
-	<rdf:rest rdf:nodeID="genid26"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid26">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_glove"/>
-	<rdf:rest rdf:nodeID="genid25"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid25">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
-	<rdf:rest rdf:nodeID="genid24"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid24">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk"/>
-	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-</rdf:Description>
-<!--  -->
-
-<rdf:Description rdf:nodeID="genid29">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-	<owl:distinctMembers rdf:nodeID="genid32"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid32">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Michael_Phelps"/>
-	<rdf:rest rdf:nodeID="genid31"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid31">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Pele"/>
-	<rdf:rest rdf:nodeID="genid30"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid30">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Tien_Minh"/>
-	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-</rdf:Description>
-<!--  -->
-
-<rdf:Description rdf:nodeID="genid33">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
-	<owl:members rdf:nodeID="genid37"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid37">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipment"/>
-	<rdf:rest rdf:nodeID="genid36"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid36">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
-	<rdf:rest rdf:nodeID="genid35"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid35">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedIn"/>
-	<rdf:rest rdf:nodeID="genid34"/>
-</rdf:Description>
-
-<rdf:Description rdf:nodeID="genid34">
-	<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-	<rdf:first rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#play"/>
-	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-</rdf:Description>
-<!--  -->
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.co-ode.org/ontologies/sport/sport.owl##"
+     xml:base="http://www.co-ode.org/ontologies/sport/sport.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sport="http://www.co-ode.org/ontologies/sport/sport.owl#">
+    <owl:Ontology rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#">
+        <rdfs:comment xml:lang="en">A sports ontology</rdfs:comment>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">version 1.5</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#hasCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#hasCountry">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipment -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipment">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <rdfs:comment>utilization</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#hasPlayer -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#hasPlayer">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+        <rdfs:comment>play by who</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedIn">
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+        <rdfs:comment>play in where</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#play -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#play">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdfs:range rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#hasCost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#hasCost">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Equipment -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasCost"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Equipment for playing sport</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Place for playing in</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipment"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#play"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Who participate into sport</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Sport -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipment"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country_brazil -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country_brazil">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country_india -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country_india">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country_netherlands -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country_netherlands">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country_other -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <sport:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</sport:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#cycling_player"/>
+        <sport:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</sport:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_glove -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_glove">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#boxing_player"/>
+        <sport:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</sport:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#badminton_player"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#tennis_player"/>
+        <sport:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6000</sport:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#swim_player"/>
+        <sport:hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</sport:hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground_asphalt -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_asphalt">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#cycling_player"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground_cement -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_cement">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#badminton_player"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground_clay -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_clay">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#tennis_player"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground_grass -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_grass">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#soccer_player"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground_ring -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_ring">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#boxing_player"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Ground_water -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_water">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#swim_player"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Adam_Yates -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Adam_Yates">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle"/>
+        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_cycling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Alfredo_Binda -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Alfredo_Binda">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle"/>
+        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_cycling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Anh_Vien -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Anh_Vien">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk"/>
+        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_swim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Cong_Phuong -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Cong_Phuong">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball"/>
+        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_soccer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Duy_Nhat -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Duy_Nhat">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_glove"/>
+        <sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_boxing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Lee_Chong_Wei -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Lee_Chong_Wei">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
+        <sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_badminton"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Ly_Hoang_Nam -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Ly_Hoang_Nam">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
+        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_tennis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Michael_Phelps -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Michael_Phelps">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk"/>
+        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_swim"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Mohammed_Ali -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Mohammed_Ali">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_glove"/>
+        <sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_boxing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Pele -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Pele">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_brazil"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball"/>
+        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_soccer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Roger_Federer -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Roger_Federer">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Foreigner"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
+        <sport:play rdf:resource="urn:absolute:sport-ontology#Sport_tennis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Player_Tien_Minh -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Tien_Minh">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Vietnamese"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_vietnam"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
+        <sport:play rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_badminton"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Sport_badminton -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_badminton">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdf:type>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#badminton_player"/>
+        <sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_cement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#Sport_boxing -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport_boxing">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_glove"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#boxing_player"/>
+        <sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_ring"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#badminton_player -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#badminton_player">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Lee_Chong_Wei"/>
+        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Tien_Minh"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#boxing_player -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#boxing_player">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Duy_Nhat"/>
+        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Mohammed_Ali"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#cycling_player -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#cycling_player">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Adam_Yates"/>
+        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Alfredo_Binda"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#soccer_player -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#soccer_player">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Cong_Phuong"/>
+        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Pele"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#swim_player -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#swim_player">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Anh_Vien"/>
+        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Michael_Phelps"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/sport/sport.owl#tennis_player -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#tennis_player">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Ly_Hoang_Nam"/>
+        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Roger_Federer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sport-ontology#Sport_cycling -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sport-ontology#Sport_cycling">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_netherlands"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#cycling_player"/>
+        <sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_asphalt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sport-ontology#Sport_soccer -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sport-ontology#Sport_soccer">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#soccer_player"/>
+        <sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_grass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sport-ontology#Sport_swim -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sport-ontology#Sport_swim">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_other"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk"/>
+        <sport:hasPlayer rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#swim_player"/>
+        <sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_water"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- urn:absolute:sport-ontology#Sport_tennis -->
+
+    <owl:NamedIndividual rdf:about="urn:absolute:sport-ontology#Sport_tennis">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        <sport:hasCountry rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Country_britain"/>
+        <sport:hasEquipment rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
+        <sport:isPlayedBy rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#tennis_player"/>
+        <sport:isPlayedIn rdf:resource="http://www.co-ode.org/ontologies/sport/sport.owl#Ground_clay"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Ground"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Sport"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_ball"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_bicycle"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_glove"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_racquet"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Equipment_trunk"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Michael_Phelps"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Pele"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#Player_Tien_Minh"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#hasEquipment"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedBy"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#isPlayedIn"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/sport/sport.owl#play"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
 <!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
-</rdf:RDF>
